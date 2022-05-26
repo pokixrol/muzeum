@@ -1,7 +1,9 @@
 {% load static %}
- <footer class="container-fluid text-center">
- <hr>
- <!-- Vykreslí logo školy ze statického souboru skola-logo.png -->
- <p><img src="{% static 'img/skola-logo.png' %}" alt="Logo školy"></p>
- <p>&copy; 2022 - SŠPU Opava</p>
- </footer>
+<footer class="py-5 bg-secondary" style="background-color: rgba(0,0,0,0.4)!important;">
+
+    <p class="text-center"><img src="{% static 'img/skola-logo.png' %}" alt="Logo školy"></p>
+
+    <p class="m-0 text-center">
+        Karolína Říčná, SŠPU Opava, IT3 &copy; 2022
+    </p>
+</footer>

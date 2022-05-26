@@ -1,21 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="row mt-3 mb-3 bg-warning p-3">
+<div class="row" style="margin: 20px">
  <div class="col-sm-12">
- <h2 class="text-center">Nejlépe hodnocené filmy</h2>
+ <h2 class="text-center" style="font-size: 25px;text-transform: uppercase;background-color: rgba(0,0,0,0.4);padding: 5px;">Výběr nejlepších exemplářů</h2>
  </div>
 </div>
 <div class="row">
- {% for film in films %}
+ {% for exemplar in exemplare %}
  <div class="col-sm-4">
  <div class="card">
  {% if film.poster %}
  <img class="card-img-top" src="{{ film.poster.url }}" alt="{{ film.title }}">
  {% endif %}
  <div class="card-body">
- <h4 class="card-title">{{ film.title }}</h4>
- <p class="card-text"><strong>Žánry:</strong>
- {% for genre in film.genres.all %}{{ genre.name }}{% endfor %}
+ <h4 class="card-title">{{ exemplar.nazev}}</h4>
+ <p class="card-text"><strong>Odvětví:</strong>
+ {% for odvetvi in exemplar.odvetvi.all %}{{ odvetvi.nazev }}{% endfor %}
  </p>
  <p><strong>Hodnocení:</strong> {{ film.rate }}</p>
  <a href="#" class="btn btn-primary">Podrobnosti</a>

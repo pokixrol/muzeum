@@ -26,4 +26,4 @@ class ExemplarListView(ListView):
 
 def easteregg(request):
 
-    return render(request, 'index.html')
+    return render(request, 'eatreregg/index.html')

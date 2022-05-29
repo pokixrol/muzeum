@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Přehled exemplář-{% endblock %}
+
+{% block content %}
+    <div class="row"  style="margin: 20px">
+        <div class="col-sm-12">
+            <h2 class="text-center" style="font-size: 25px;text-transform: uppercase;background-color: rgba(0,0,0,0.4);padding: 5px;">Přehled exemplářů</h2>
+        </div>
+    </div>
+    <div class="row">
+
+        {% for exemplar in list_exemplaru %}
+            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="card">
+                    {% if film.poster %}
+                        <img class="card-img-top" src="{{ film.poster.url }}" alt="{{ film.title }}">
+                    {% endif %}
+                    <div class="card-body">
+
+                        <h4 class="card-title"><a href="#">{{ exemplar.nazev }}</a></h4>
+
+                        <p class="card-text">{% for genre in film.genres.all %}<a href="#"
+                                                                                  class="btn btn-light">{{ genre.name }}</a> {% endfor %}
+                        </p>
+
+                        <a href="#" class="btn btn-primary">Podrobnosti</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -21,7 +21,7 @@ class Odvetvi(models.Model):
 
 class Exemplar(models.Model):
     nazev = models.CharField(max_length=50, verbose_name="Název")
-    datum_vytvoreni = models.DateField(blank=True, null=True, verbose_name="Datum vytvoření")
+    # datum_vytvoreni = models.DateField(blank=True, null=True, verbose_name="Datum vytvoření")
     popis = models.TextField(blank=True, null=True, verbose_name="Popis")
     odvetvi = models.ManyToManyField(Odvetvi, help_text='Vyberte odvětví, do kterého spadá tento exemplář.')
 
@@ -30,7 +30,8 @@ class Exemplar(models.Model):
         verbose_name_plural = 'Exempláře'
 
     def __str__(self):
-        return f"{self.nazev}, datum vytvoření: {str(self.datum_vytvoreni)}"
+        # return f"{self.nazev}, datum vytvoření: {str(self.datum_vytvoreni)}"
+        return f"{self.nazev}, odvětví: {str(self.odvetvi)}"
 
 
 class Priloha(models.Model):

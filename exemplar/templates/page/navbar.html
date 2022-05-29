@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="background-color:  black !important;">
-    <a class="navbar-brand" href="../eatreregg/index.html"
+    <a class="navbar-brand" href="http://127.0.0.1:8000/exemplar/easteregg/"
     ><img
             id="logo"
             src="../../static/img/logo.png"
@@ -20,8 +20,7 @@
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="#">Úvodní stránka</a>
-                <span class="sr-only">(current)</span>
+                <a class="nav-link active" href="{% url 'index' %}">Úvodní stránka</a>
             </li>
             <!--
            <li class="nav-item dropdown active">
@@ -41,10 +40,10 @@
             </li>
          -->
             <li class="nav-item">
-                <a class="nav-link" href="prehled/index.html">Přehled exemplářů</a>
+                <a class="nav-link" href="http://127.0.0.1:8000/exemplar/exemplare/">Přehled exemplářů</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="odvetvi/index.html">Odvětví</a>
+                <a class="nav-link" href="#">Odvětví</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

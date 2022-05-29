@@ -15,7 +15,7 @@
  <div class="card-body">
  <h4 class="card-title">{{ exemplar.nazev}}</h4>
  <p class="card-text"><strong>Odvětví:</strong>
- {% for odvetvi in exemplar.odvetvi.all %}{{ odvetvi.nazev }}{% endfor %}
+ {% for odvetvi in exemplar.odvetvi.all %}<button id="susButton" class="btn btn-light">{{ odvetvi.nazev }}</button>{% endfor %}
  </p>
  <p><strong>Hodnocení:</strong> {{ film.rate }}</p>
  <a href="#" class="btn btn-primary">Podrobnosti</a>

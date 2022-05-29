@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from exemplar.models import Exemplar, Odvetvi, Priloha
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 
 def index(request):
@@ -25,5 +25,11 @@ class ExemplarListView(ListView):
 
 
 def easteregg(request):
-
     return render(request, 'eatreregg/index.html')
+
+
+class ExemplarDetailView(DetailView):
+    model = Exemplar
+    context_object_name = 'exemplar_detail'
+
+    template_name = 'detail.html'

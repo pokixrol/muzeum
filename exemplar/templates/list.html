@@ -11,10 +11,11 @@
     <div class="row">
 
         {% for exemplar in list_exemplaru %}
-            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="col-sm-6 col-md-3 col-lg-4 col-xl-4">
                 <div class="card">
-                    {% if film.poster %}
-                        <img class="card-img-top" src="{{ film.poster.url }}" alt="{{ exemplar.nazev }}">
+                    {% if exemplar.poster %}
+                        <img class="img-fluid mx-auto d-block " style="max-height: 300px; width: auto; margin-top: 20px" src="{{ exemplar.poster.url }}" alt="{{ exemplar.nazev }}">
+
                     {% endif %}
                     <div class="card-body">
 

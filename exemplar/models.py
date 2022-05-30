@@ -23,6 +23,8 @@ class Exemplar(models.Model):
     nazev = models.CharField(max_length=50, verbose_name="Název")
     # datum_vytvoreni = models.DateField(blank=True, null=True, verbose_name="Datum vytvoření")
     popis = models.TextField(blank=True, null=True, verbose_name="Popis")
+    poster = models.ImageField(blank=True, verbose_name="Poster",
+                               upload_to="posters/")
     odvetvi = models.ManyToManyField(Odvetvi, help_text='Vyberte odvětví, do kterého spadá tento exemplář.')
 
     class Meta:

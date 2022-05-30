@@ -12,10 +12,10 @@
  <div class="row">
  <div class="col-md-9">{{ exemplar_detail.popis }}</div>
  <div class="col-md-3">
- {% if film_detail.poster %}
- <a href="{{ film_detail.poster.url }}">
- <img src="{{ film_detail.poster.url }}" class="img-fluid"
-alt="Plakát k filmu">
+ {% if exemplar_detail.poster %}
+ <a href="{{ exemplar_detail.poster.url }}">
+ <img src="{{ exemplar_detail.poster.url }}" class="img-fluid"
+alt="poster">
  </a>
  {% endif %}
  </div>
@@ -24,7 +24,6 @@ alt="Plakát k filmu">
  <div class="col-lg-6 bg-light">
  <h2 class="text-center" style="font-size: 25px;text-transform: uppercase;background-color: rgba(0,0,0,0.4);padding: 5px; margin-bottom: 20px ">Fotogalerie</h2>
  <div class="row">
- <!-- Zobrazení fotogalerie k příslušnému filmu -->
  {% for image in exemplar_detail.priloha_set.all %}
  <div class="col-lg-6 col-xl-4">
  <img src="{{ image.soubor.url }}" class="img-fluid img-thumbnail" alt="{{image.nazev }}">
